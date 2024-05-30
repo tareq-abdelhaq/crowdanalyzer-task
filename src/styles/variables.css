@@ -1,3 +1,6 @@
 :root {
   --primary-color: #572589;
+  --primary-color-rgb: 87, 37, 137;
+
+  --danger: #7a0012;
 }

@@ -1,0 +1,15 @@
+.error {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.refetch-btn {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.refetch-btn:hover {
+  text-decoration: underline;
+}
