@@ -20,13 +20,14 @@ function HomePage() {
   const selectedCategory = searchParams.get("category");
 
   const fetchProducts = useCallback(async () => {
+    const params = {
+      skip: selectedCategory ? 0 : 11,
+      limit: 11,
+    };
     setLoadingDataError("");
     setIsDataLoading(true);
     try {
-      const products = await getAllProducts(
-        selectedCategory,
-        "skip=45&limit=11"
-      );
+      const products = await getAllProducts(selectedCategory, params);
       setFeaturedProduct(products[0]);
       setRecommendedProductList(products.slice(1, 6));
       setPopularProductList(products.slice(6, 11));

@@ -1,12 +1,12 @@
 import { API_BASE_URL } from "../config";
 
-export async function getAllProducts(category, queryString) {
-  let endPoint = `${API_BASE_URL}/products`;
+export async function getAllProducts(category, params) {
+  let endPoint = `${API_BASE_URL}/products?`;
   if (category) {
-    endPoint = `${API_BASE_URL}/products/category/${category}`;
+    endPoint = `${API_BASE_URL}/products/category/${category}?`;
   }
-  if (queryString) {
-    endPoint = endPoint.concat(`?${queryString}`);
+  for (const key in params) {
+    endPoint = endPoint.concat(`${key}=${params[key]}&`);
   }
   try {
     const res = await fetch(endPoint);

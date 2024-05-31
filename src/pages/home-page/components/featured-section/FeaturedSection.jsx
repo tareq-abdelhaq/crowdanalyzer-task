@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+
+import { APP_PATHS } from "../../../../constants/routes";
+
 import Button from "../../../../components/ui/Button/Button";
 
 import classes from "./FeaturedSection.module.css";
 
 function FeaturedSection(props) {
-  const { title, description, category, images } = props;
+  const { id, title, description, category, images } = props;
 
   return (
     <section className={classes.featured}>
@@ -19,7 +23,9 @@ function FeaturedSection(props) {
 
         <div>
           <span className={classes["featured_category"]}>{category}</span>
-          <Button type="primary">more info</Button>
+          <Link to={APP_PATHS.GAME_DETAILS.replace(":gameId", id)}>
+            <Button type="primary">more info</Button>
+          </Link>
         </div>
       </div>
     </section>

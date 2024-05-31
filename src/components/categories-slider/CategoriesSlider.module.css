@@ -10,10 +10,6 @@
 }
 
 .slider {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-
   display: flex;
   gap: 0.5rem;
 

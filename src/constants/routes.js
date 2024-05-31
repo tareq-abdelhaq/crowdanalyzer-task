@@ -7,7 +7,7 @@ import GameDetailsPage from "../pages/GameDetailsPage";
 
 export const APP_PATHS = Object.freeze({
   HOME: "/",
-  GAME_DETAILS: "/games/:slug",
+  GAME_DETAILS: "/games/:gameId",
 });
 
 export const APP_ROUTES = [
