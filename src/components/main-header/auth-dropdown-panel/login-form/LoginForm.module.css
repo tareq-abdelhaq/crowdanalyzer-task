@@ -1,0 +1,17 @@
+.control {
+  margin-bottom: 10px;
+
+  label {
+    font-size: 0.8rem;
+  }
+}
+
+.login-error {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}

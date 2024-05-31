@@ -1,0 +1,13 @@
+.dropdow-container {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: var(--shadow-1);
+}

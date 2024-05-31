@@ -1,0 +1,7 @@
+.auth-bar {
+  text-align: center;
+  font-weight: 700;
+  background-color: var(--white-2);
+  color: var(--primary-color);
+  padding-block: 10px;
+}
