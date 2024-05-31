@@ -1,20 +1,20 @@
-import { Fragment } from "react";
-
 import { Outlet } from "react-router-dom";
 
 import MainHeader from "../main-header/MainHeader";
 import MainContainer from "../main-container/MainContainer";
 
+import classes from "./MainLayout.module.css";
+
 function MainLayout() {
   return (
-    <Fragment>
+    <div className={classes.layout}>
       <MainHeader />
-      <main>
-        <MainContainer>
+      <main className={classes.main}>
+        <MainContainer className={classes["main-content-container"]}>
           <Outlet />
         </MainContainer>
       </main>
-    </Fragment>
+    </div>
   );
 }
 

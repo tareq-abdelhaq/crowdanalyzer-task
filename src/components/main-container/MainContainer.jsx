@@ -1,9 +1,12 @@
+import classNames from "classnames";
 import classes from "./MainContainer.module.css";
 
 function MainContainer(props) {
-  const { children } = props;
+  const { className, children } = props;
 
-  return <div className={classes.container}>{children}</div>;
+  return (
+    <div className={classNames(className, classes.container)}>{children}</div>
+  );
 }
 
 export default MainContainer;

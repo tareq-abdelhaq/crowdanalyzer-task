@@ -2,5 +2,13 @@
   --primary-color: #572589;
   --primary-color-rgb: 87, 37, 137;
 
+  --gray-1: #3c3c3d80;
+  --gray-2: #444242;
+  --gray-3: #444242;
+
+  --red-1: #ff375e;
+
+  --shadow-1: 0px 2px 12px rgba(0, 0, 0, 0.07);
+
   --danger: #7a0012;
 }

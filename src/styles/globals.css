@@ -10,6 +10,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+}
+
 *,
 *::after,
 *::before {
@@ -34,9 +38,7 @@ img {
 button {
   border: none;
   outline: none;
-
   padding: 0;
-
   background-color: transparent;
 }
 

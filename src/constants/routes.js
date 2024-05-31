@@ -2,7 +2,7 @@ import { Navigate } from "react-router-dom";
 
 import MainLayout from "../components/main-layout/MainLayout";
 
-import HomePage from "../pages/HomePage";
+import HomePage from "../pages/home-page/HomePage";
 import GameDetailsPage from "../pages/GameDetailsPage";
 
 export const APP_PATHS = Object.freeze({
