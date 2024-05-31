@@ -3,23 +3,66 @@
   box-shadow: var(--shadow-1);
 
   height: 60px;
+  padding-inline: 0.2rem;
 
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.slider {
+.slider-container {
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
 
-  overflow-x: auto;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-.slider::-webkit-scrollbar {
-  display: none;
+.slider-control {
+  background-color: #fff;
+  box-shadow: 4px 3px 5px 4px rgba(255, 255, 255, 0.99);
+
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  z-index: 30;
+
+  &:first-child {
+    left: 0;
+  }
+  &:last-child {
+    right: 0;
+  }
+
+  button {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background-color: var(--white-2);
+  }
+}
+
+.slider {
+  flex: 1 1 auto;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .slide {
