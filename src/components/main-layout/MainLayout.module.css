@@ -6,7 +6,7 @@
 
 .main {
   flex-grow: 1;
-  background-color: rgb(242, 242, 242);
+  background-color: var(--white-2);
 }
 
 .main-content-container {

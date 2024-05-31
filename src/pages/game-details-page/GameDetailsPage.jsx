@@ -1,65 +1,61 @@
 import { Fragment, useState, useEffect, useCallback } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-import { getAllGames } from "../../api/games";
+import { getGameDetails, getAllGames } from "../../api/games";
 
 import Loading from "../../components/ui/loading/Loading";
 import DataLoadingError from "../../components/ui/data-loading-error/DataLoadingError";
-import FeaturedSection from "./components/featured-section/FeaturedSection";
+import GameDetails from "./components/game-details/GameDetails";
 import GameList from "../../components/game-list/GameList";
 
-function HomePage() {
-  const [featuredGame, setFeaturedGame] = useState();
+function GameDetailsPage() {
+  const [gameDetails, setGameDetails] = useState();
   const [recommendedGameList, setRecommendedGameList] = useState([]);
-  const [popularGameList, setPopularGameList] = useState([]);
-
   const [isDataLoading, setIsDataLoading] = useState(true);
   const [loadingDataError, setLoadingDataError] = useState("");
 
-  const [searchParams] = useSearchParams();
-  const selectedCategory = searchParams.get("category");
+  const { gameId } = useParams();
 
-  const fetchGames = useCallback(async () => {
+  const fetchData = useCallback(async () => {
     const params = {
-      skip: selectedCategory ? 0 : 11,
-      limit: 11,
+      skip: 12,
+      limit: 5,
     };
     setLoadingDataError("");
     setIsDataLoading(true);
     try {
-      const games = await getAllGames(selectedCategory, params);
-      setFeaturedGame(games[0]);
-      setRecommendedGameList(games.slice(1, 6));
-      setPopularGameList(games.slice(6, 11));
+      const game = await getGameDetails(+gameId);
+      const games = await getAllGames(null, params);
+      setGameDetails(game);
+      setRecommendedGameList(games);
     } catch (err) {
       setLoadingDataError(err.message);
     } finally {
       setIsDataLoading(false);
     }
-  }, [selectedCategory]);
+  }, [gameId]);
 
   useEffect(() => {
-    fetchGames();
-  }, [fetchGames]);
+    fetchData();
+  }, [fetchData]);
 
   return (
     <Fragment>
       {isDataLoading && <Loading />}
       {loadingDataError && (
-        <DataLoadingError message={loadingDataError} onRefetch={fetchGames} />
+        <DataLoadingError message={loadingDataError} onRefetch={fetchData} />
       )}
       {!isDataLoading && !loadingDataError && (
         <Fragment>
-          <FeaturedSection {...featuredGame} />
+          <GameDetails {...gameDetails} />
           <GameList
             title="Most Recommendation"
             gameList={recommendedGameList}
           />
-          <GameList title="Most Popular" gameList={popularGameList} />
         </Fragment>
       )}
     </Fragment>
   );
 }
 
-export default HomePage;
+export default GameDetailsPage;

@@ -7,6 +7,10 @@
   padding: 22px;
 }
 
+.game-list--empty {
+  width: 60px;
+}
+
 .game-list-section header {
   margin-bottom: 22px;
 

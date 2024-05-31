@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { APP_PATHS } from "../../constants/routes";
 
 import GameItem from "./game-item/GameItem";
+import Empty from "../ui/empty/Empty";
 
 import classes from "./GameList.module.css";
-import Empty from "../ui/empty/Empty";
 
 function GameList(props) {
   const { title, gameList } = props;
@@ -20,7 +20,7 @@ function GameList(props) {
         {isViewMoreVisible && <Link to={APP_PATHS.HOME}>SEE ALL</Link>}
       </header>
       {isEmpty ? (
-        <Empty />
+        <Empty className={classes["game-list--empty"]} />
       ) : (
         <ul>
           {gameList.map((game) => (

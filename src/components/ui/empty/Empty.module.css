@@ -4,13 +4,13 @@
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+}
 
-  .empty__icon {
-    width: 100px;
-  }
+.empty__icon {
+  width: 100px;
+}
 
-  p {
-    color: var(--gray-1);
-    font-weight: 700;
-  }
+.empty p {
+  color: var(--gray-1);
+  font-weight: 700;
 }
