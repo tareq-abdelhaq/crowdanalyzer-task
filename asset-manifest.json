@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c5aba6c5.css",
+    "main.js": "/static/js/main.bf218431.js",
+    "static/media/empty-box.svg": "/static/media/empty-box.cd788a850a5a4afb903005db1d74103c.svg",
+    "static/media/kabab-menu.svg": "/static/media/kabab-menu.e40c0653b8819d81ada4c8ee63574033.svg",
+    "static/media/search.svg": "/static/media/search.bb5ed59cc8ff78fa4ecca3d8d3070066.svg",
+    "index.html": "/index.html",
+    "main.c5aba6c5.css.map": "/static/css/main.c5aba6c5.css.map",
+    "main.bf218431.js.map": "/static/js/main.bf218431.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5aba6c5.css",
+    "static/js/main.bf218431.js"
+  ]
+}
