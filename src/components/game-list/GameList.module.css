@@ -56,5 +56,17 @@
   display: grid;
 
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 10px;
+  gap: 20px 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .game-list-section ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .game-list-section ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

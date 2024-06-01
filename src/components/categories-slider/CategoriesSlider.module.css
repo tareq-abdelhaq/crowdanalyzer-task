@@ -3,8 +3,7 @@
   box-shadow: var(--shadow-1);
 
   height: 60px;
-  padding-inline: 0.2rem;
-
+  padding-inline: 1rem;
   position: relative;
   display: flex;
   justify-content: center;
@@ -38,10 +37,10 @@
   z-index: 30;
 
   &:first-child {
-    left: 0;
+    left: 10px;
   }
   &:last-child {
-    right: 0;
+    right: 10px;
   }
 
   button {

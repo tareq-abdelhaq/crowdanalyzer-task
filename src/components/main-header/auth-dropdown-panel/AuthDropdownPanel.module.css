@@ -7,6 +7,7 @@
   top: 30px;
   right: 0;
   background-color: #fff;
+  z-index: 60;
   border-radius: 6px;
   padding: 12px;
   box-shadow: var(--shadow-1);

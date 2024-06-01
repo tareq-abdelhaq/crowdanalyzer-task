@@ -61,3 +61,19 @@
     line-height: 1.25;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .featured {
+    flex-direction: column;
+    max-height: fit-content;
+  }
+
+  .featured_image {
+    flex: none;
+    height: 200px;
+  }
+
+  .featured_info {
+    padding: 20px;
+  }
+}
