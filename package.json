@@ -1,6 +1,7 @@
 {
   "name": "crowdanalyzer-task",
   "version": "0.1.0",
+  "homepage": "https://tareq-abdelhaq.github.io/crowdanalyzer-task",
   "private": true,
   "dependencies": {
     "classnames": "^2.5.1",
